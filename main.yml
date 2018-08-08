@@ -1,0 +1,4 @@
+- hosts: web
+  tasks:
+    - name: print something
+      debug: msg="hello {{ ansible_hostname }} node!"
