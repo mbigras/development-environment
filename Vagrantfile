@@ -19,7 +19,10 @@ def create_development_inventory(hosts)
   [web]
   #{hosts.select { |h,_| h.match(/web/) }.keys.join("\n")}
 
-  [web:vars]
+  [vagrant:children]
+  web
+
+  [vagrant:vars]
   ansible_user = vagrant
   INVENTORY
 
