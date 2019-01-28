@@ -1,8 +1,0 @@
-[web]
-web1
-
-[vagrant:children]
-web
-
-[vagrant:vars]
-ansible_user = vagrant
